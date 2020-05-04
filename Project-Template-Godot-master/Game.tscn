@@ -30,7 +30,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 14 )
+extents = Vector2( 14, 28 )
 
 [node name="Game" type="Node2D"]
 
@@ -50,11 +50,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0, 4 )
-scale = Vector2( 1.05408, 2 )
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 10 )
