@@ -6,7 +6,7 @@ const ACCELERATION = 50
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -550
 
-const FIREBALL = preload("res://Fireball.tscn")
+var FIREBALL = preload("res://Fireball.tscn")
 
 var motion = Vector2()
 
@@ -18,10 +18,14 @@ func _physics_process(delta):
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 		$Sprite.flip_h = false
 		$Sprite.play("Run")
+		if sign($Position2D.position.x) == -1:
+			$Position2D.position.x *= -1
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x -ACCELERATION, -MAX_SPEED)
 		$Sprite.flip_h = true
 		$Sprite.play("Run")
+		if sign($Position2D.position.x) == 1:
+			$Position2D.position.x *= -1
 	else:
 		$Sprite.play("Idle")
 		friction = true
@@ -29,6 +33,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_focus_next"):
 		var fireball = FIREBALL.instance()
+		if sign($Position2D.position.x) == 1:
+			fireball.set_fireball_direction(1)
+		else:
+			fireball.set_fireball_direction(-1)
 		get_parent().add_child(fireball)
 		fireball.position = $Position2D.global_position
 	

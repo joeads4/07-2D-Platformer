@@ -1,13 +1,20 @@
 extends Area2D
 
-const SPEED = 5
+const SPEED = 100
 var velocity = Vector2()
+var direction = 1
 
 func _ready():
 	pass # Replace with function body.
 
+func set_fireball_direction(dir):
+	direction = dir
+	if dir == -1:
+		$AnimatedSprite.flip_v = true
+
+
 func _physics_process(delta):
-	velocity.x = SPEED + delta
+	velocity.x = SPEED * delta * direction
 	translate(velocity)
 	$AnimatedSprite.play("Shoot")
 	pass
