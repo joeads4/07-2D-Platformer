@@ -6,6 +6,8 @@ const ACCELERATION = 50
 const MAX_SPEED = 200
 const JUMP_HEIGHT = -550
 
+const FIREBALL = preload("res://Fireball.tscn")
+
 var motion = Vector2()
 
 func _physics_process(delta):
@@ -24,6 +26,11 @@ func _physics_process(delta):
 		$Sprite.play("Idle")
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
+	
+	if Input.is_action_just_pressed("ui_focus_next"):
+		var fireball = FIREBALL.instance()
+		get_parent().add_child(fireball)
+		fireball.position = $Position2D.global_position
 	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):

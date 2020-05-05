@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fireball.gd" type="Script" id=1]
+[ext_resource path="res://candy/yaycandies/size1/candycorn.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Shoot",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.39971, 3.53007 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Fireball" type="Area2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fireball"]
+position = Vector2( 15.6972, 12.6207 )
+rotation = 1.57324
+scale = Vector2( 0.213602, 0.213602 )
+frames = SubResource( 1 )
+animation = "Shoot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireball"]
+position = Vector2( 15.7069, 12.6804 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Fireball"]
+position = Vector2( 15.6907, 12.6559 )
+scale = Vector2( 0.440155, 0.361923 )
+[connection signal="screen_exited" from="Fireball/VisibilityNotifier2D" to="Fireball" method="_on_VisibilityNotifier2D_screen_exited"]

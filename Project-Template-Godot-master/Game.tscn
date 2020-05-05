@@ -31,3 +31,5 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelComplete"]
 shape = SubResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
