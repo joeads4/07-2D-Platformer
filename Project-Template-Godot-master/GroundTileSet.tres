@@ -1,13 +1,13 @@
 [gd_resource type="TileSet" load_steps=18 format=2]
 
-[ext_resource path="res://png/Tiles/output-onlinepngtools (1).png" type="Texture" id=1]
-[ext_resource path="res://png/Tiles/Tile02.png" type="Texture" id=2]
-[ext_resource path="res://png/Tiles/Tile11.png" type="Texture" id=3]
-[ext_resource path="res://png/Tiles/Tile12.png" type="Texture" id=4]
-[ext_resource path="res://png/Tiles/Tile13.png" type="Texture" id=5]
-[ext_resource path="res://png/Tiles/Tile14.png" type="Texture" id=6]
-[ext_resource path="res://png/Tiles/Tile15.png" type="Texture" id=7]
-[ext_resource path="res://png/Tiles/Tile16.png" type="Texture" id=8]
+[ext_resource path="res://png/Tiles/Tile02.png" type="Texture" id=1]
+[ext_resource path="res://png/Tiles/Tile11.png" type="Texture" id=2]
+[ext_resource path="res://png/Tiles/Tile12.png" type="Texture" id=3]
+[ext_resource path="res://png/Tiles/Tile13.png" type="Texture" id=4]
+[ext_resource path="res://png/Tiles/Tile14.png" type="Texture" id=5]
+[ext_resource path="res://png/Tiles/Tile15.png" type="Texture" id=6]
+[ext_resource path="res://png/Tiles/Tile16.png" type="Texture" id=7]
+[ext_resource path="res://png/Tiles/Tile01.png" type="Texture" id=8]
 [ext_resource path="res://png/Tiles/Tile03.png" type="Texture" id=9]
 [ext_resource path="res://png/Tiles/Tile04.png" type="Texture" id=10]
 [ext_resource path="res://png/Tiles/Tile05.png" type="Texture" id=11]
@@ -21,24 +21,8 @@
 extents = Vector2( 16, 16 )
 
 [resource]
-0/name = "0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 32 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
-} ]
-0/z_index = 0
 1/name = "1"
-1/texture = ExtResource( 2 )
+1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 32, 32 )
@@ -182,7 +166,7 @@ extents = Vector2( 16, 16 )
 } ]
 9/z_index = 0
 10/name = "10"
-10/texture = ExtResource( 3 )
+10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 32, 32 )
@@ -198,7 +182,7 @@ extents = Vector2( 16, 16 )
 } ]
 10/z_index = 0
 11/name = "11"
-11/texture = ExtResource( 4 )
+11/texture = ExtResource( 3 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 32, 32 )
@@ -214,7 +198,7 @@ extents = Vector2( 16, 16 )
 } ]
 11/z_index = 0
 12/name = "12"
-12/texture = ExtResource( 5 )
+12/texture = ExtResource( 4 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 32, 32 )
@@ -230,7 +214,7 @@ extents = Vector2( 16, 16 )
 } ]
 12/z_index = 0
 13/name = "13"
-13/texture = ExtResource( 6 )
+13/texture = ExtResource( 5 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 32, 32 )
@@ -246,7 +230,7 @@ extents = Vector2( 16, 16 )
 } ]
 13/z_index = 0
 14/name = "14"
-14/texture = ExtResource( 7 )
+14/texture = ExtResource( 6 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 32, 32 )
@@ -262,7 +246,7 @@ extents = Vector2( 16, 16 )
 } ]
 14/z_index = 0
 15/name = "15"
-15/texture = ExtResource( 8 )
+15/texture = ExtResource( 7 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 32, 32 )
@@ -277,3 +261,19 @@ extents = Vector2( 16, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
 } ]
 15/z_index = 0
+16/name = "0"
+16/texture = ExtResource( 8 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 32, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+} ]
+16/z_index = 0
