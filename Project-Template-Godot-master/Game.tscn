@@ -23,6 +23,7 @@ __meta__ = {
 }
 
 [node name="LevelComplete" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 448, 96 )
 script = ExtResource( 3 )
 
