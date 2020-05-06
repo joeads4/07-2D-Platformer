@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const GRAVITY = 10
+const GRAVITY = 0
 const SPEED = 30
 const FLOOR = Vector2(0, -1)
 
@@ -10,10 +10,10 @@ var is_dead = false
 
 func dead():
 	is_dead = true
-	$AnimatedSprite.position.y = 4
 	velocity = Vector2(0,0)
+	$CollisionShape2D.call_deferred("set_disabled", true)
+	$AnimatedSprite.position.y = 5
 	$AnimatedSprite.play("Die")
-	$CollisionShape2D.disabled = true
 	$Timer.start()
 
 func _physics_process(delta):
