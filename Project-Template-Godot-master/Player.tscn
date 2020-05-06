@@ -63,7 +63,7 @@ position = Vector2( 2.98023e-008, -16 )
 scale = Vector2( 0.110535, 0.125819 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
+frame = 5
 playing = true
 __meta__ = {
 "_edit_group_": true
@@ -82,3 +82,4 @@ limit_left = -100000
 limit_top = -100000
 limit_right = 100000
 limit_bottom = 100008
+smoothing_enabled = true
