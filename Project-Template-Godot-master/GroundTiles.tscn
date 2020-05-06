@@ -17,6 +17,8 @@
 [ext_resource path="res://png/Tiles/Tile15.png" type="Texture" id=15]
 [ext_resource path="res://png/Tiles/Tile16.png" type="Texture" id=16]
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
