@@ -34,10 +34,7 @@ func _physics_process(delta):
 	
 	if is_on_wall():
 		direction = direction * -1
-		$RayCast2D.position.x *= -1
-	if $RayCast2D.is_colliding() == false:
-		direction = direction * -1
-		$RayCast2D.position.x *= -1
+		
 
 
 func _on_Timer_timeout():

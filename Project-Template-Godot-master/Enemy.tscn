@@ -21,26 +21,26 @@
 [ext_resource path="res://png/male/Walk (8).png" type="Texture" id=19]
 [ext_resource path="res://png/male/Walk (9).png" type="Texture" id=20]
 [ext_resource path="res://png/male/Walk (10).png" type="Texture" id=21]
-[ext_resource path="res://png/male/Attack (1).png" type="Texture" id=22]
-[ext_resource path="res://png/male/Attack (2).png" type="Texture" id=23]
-[ext_resource path="res://png/male/Attack (3).png" type="Texture" id=24]
-[ext_resource path="res://png/male/Attack (4).png" type="Texture" id=25]
-[ext_resource path="res://png/male/Attack (5).png" type="Texture" id=26]
-[ext_resource path="res://png/male/Attack (6).png" type="Texture" id=27]
-[ext_resource path="res://png/male/Attack (7).png" type="Texture" id=28]
-[ext_resource path="res://png/male/Attack (8).png" type="Texture" id=29]
-[ext_resource path="res://png/male/Dead (1).png" type="Texture" id=30]
-[ext_resource path="res://png/male/Dead (2).png" type="Texture" id=31]
-[ext_resource path="res://png/male/Dead (3).png" type="Texture" id=32]
-[ext_resource path="res://png/male/Dead (5).png" type="Texture" id=33]
-[ext_resource path="res://png/male/Dead (4).png" type="Texture" id=34]
-[ext_resource path="res://png/male/Dead (6).png" type="Texture" id=35]
-[ext_resource path="res://png/male/Dead (7).png" type="Texture" id=36]
-[ext_resource path="res://png/male/Dead (8).png" type="Texture" id=37]
-[ext_resource path="res://png/male/Dead (9).png" type="Texture" id=38]
-[ext_resource path="res://png/male/Dead (10).png" type="Texture" id=39]
-[ext_resource path="res://png/male/Dead (12).png" type="Texture" id=40]
-[ext_resource path="res://png/male/Dead (11).png" type="Texture" id=41]
+[ext_resource path="res://png/male/Dead (1).png" type="Texture" id=22]
+[ext_resource path="res://png/male/Dead (2).png" type="Texture" id=23]
+[ext_resource path="res://png/male/Dead (3).png" type="Texture" id=24]
+[ext_resource path="res://png/male/Dead (5).png" type="Texture" id=25]
+[ext_resource path="res://png/male/Dead (4).png" type="Texture" id=26]
+[ext_resource path="res://png/male/Dead (6).png" type="Texture" id=27]
+[ext_resource path="res://png/male/Dead (7).png" type="Texture" id=28]
+[ext_resource path="res://png/male/Dead (8).png" type="Texture" id=29]
+[ext_resource path="res://png/male/Dead (9).png" type="Texture" id=30]
+[ext_resource path="res://png/male/Dead (10).png" type="Texture" id=31]
+[ext_resource path="res://png/male/Dead (12).png" type="Texture" id=32]
+[ext_resource path="res://png/male/Dead (11).png" type="Texture" id=33]
+[ext_resource path="res://png/male/Attack (1).png" type="Texture" id=34]
+[ext_resource path="res://png/male/Attack (2).png" type="Texture" id=35]
+[ext_resource path="res://png/male/Attack (3).png" type="Texture" id=36]
+[ext_resource path="res://png/male/Attack (4).png" type="Texture" id=37]
+[ext_resource path="res://png/male/Attack (5).png" type="Texture" id=38]
+[ext_resource path="res://png/male/Attack (6).png" type="Texture" id=39]
+[ext_resource path="res://png/male/Attack (7).png" type="Texture" id=40]
+[ext_resource path="res://png/male/Attack (8).png" type="Texture" id=41]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -54,14 +54,14 @@ animations = [ {
 "name": "Walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -77,17 +77,12 @@ position = Vector2( 0.816887, -4.80462 )
 scale = Vector2( 0.174139, 0.174139 )
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 8
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.293678, -0.114372 )
 shape = SubResource( 2 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 15.0322, 2.81061 )
-enabled = true
-cast_to = Vector2( 0, 37 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.5
